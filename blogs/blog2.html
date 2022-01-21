@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>( •̀ ω •́ )AnranWu的博客</title>
+	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+	<link rel="icon" href="../images/logo.png" sizes="35*35">
+	
+    
+	<script src="../js/jquery.js"></script>
+    
+    <!-- /点击滑动效果--> 
+	<script>
+    function scrollTo(ele, speed)
+	{
+        if(!speed) speed = 800;
+        if(!ele)
+		{
+            $("html,body").animate({scrollTop:0},speed);
+        }
+		else
+		{
+            $("html,body").animate({scrollTop:$(ele).offset().top},speed);
+        }
+        return false;
+    }
+    </script>
+    <!-- /点击滑动效果--> 
+    
+</head>
+
+<body style="margin:0%; text-align:center;">
+<!-- /线条随鼠标移动--> 
+<script>
+	!function(){
+	
+	function n(n,e,t){
+	
+	return n.getAttribute(e)||t
+	
+	}
+	
+	function e(n){
+	
+	return document.getElementsByTagName(n)
+	
+	}
+	
+	function t(){
+	
+	var t=e("script"),o=t.length,i=t[o-1];
+	
+	return{
+	
+	l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)
+	
+	}
+	
+	}
+	
+	function o(){
+	
+	a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
+	
+	c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
+	
+	}
+	
+	function i(){
+	
+	r.clearRect(0,0,a,c);
+	
+	var n,e,t,o,m,l;
+	
+	s.forEach(function(i,x){
+	
+	for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
+	
+	null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
+	
+	l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
+	
+	t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
+	
+	}),
+	
+	x(i)
+	
+	}
+	
+	var a,c,u,m=document.createElement("canvas"),
+	
+	d=t(),l="c_n"+d.l,r=m.getContext("2d"),
+	
+	x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
+	
+	function(n){
+	
+	window.setTimeout(n,1e3/45)
+	
+	},
+	
+	w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.onresize=o,
+	
+	window.onmousemove=function(n){
+	
+	n=n||window.event,y.x=n.clientX,y.y=n.clientY
+	
+	},
+	
+	window.onmouseout=function(){
+	
+	y.x=null,y.y=null
+	
+	};
+	
+	for(var s=[],f=0;d.n>f;f++){
+	
+	var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
+	
+	}
+	
+	u=s.concat([y]),
+	
+	setTimeout(function(){i()},100)
+	
+	}();
+</script>
+<!-- /线条随鼠标移动--> 
+
+<!-- /失去焦点Title变化 --> 
+<script>
+     	document.addEventListener('visibilitychange', function() 
+		{
+			var isHidden = document.hidden;
+			if (isHidden) 
+			{
+				document.title = '(oﾟvﾟ)ノ Hi( •̀ ω •́ )AnranWu的主页';
+			} 
+			else 
+			{
+				document.title = '( •̀ ω •́ )AnranWu的主页';
+			}
+     	});
+	</script> 
+<!-- /失去焦点Title变化 -->
+
+<!-- /看板娘-->
+<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+<script>
+    L2Dwidget.init({
+        "model": {
+            //jsonpath控制显示那个小萝莉模型，下面这个就是我觉得最可爱的小萝莉模型，替换时后面名字也要替换掉
+            jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+            "scale": 1
+        },
+        "display": {
+            "position": "left", //看板娘的表现位置
+            "width": 80,  //小萝莉的宽度
+            "height": 160, //小萝莉的高度
+            "hOffset": 0,
+            "vOffset": -20
+        },
+        "mobile": {
+            "show": true,
+            "scale": 0.5
+        },
+        "react": {
+            "opacityDefault": 0.7,
+            "opacityOnHover": 0.2
+        }
+    });
+</script>
+<!-- /看板娘-->
+<a id="gotomain"></a>
+	<div class="other-header" style="background-image:url(../images/页首图片/草原.jpg);">
+        <p>我的博客</p>
+    </div>
+    
+    
+	
+    
+    <div id="main">
+        <div id="catalogue">
+         	<ul>
+            	<li class="catalogue-li"><a href="../index.html">我的主页</a></li>
+              	<li class="catalogue-li"  style="background-color:rgba(237,228,254,0.7); font-family:'方正粗黑宋简体';"><a href="../myBlogs.html">我的博客</a></li>
+               	<li class="catalogue-li"><a href="../myAlbum.html">我的相册</a></li>
+              	<li class="catalogue-li"><a href="../myDairy.html">我的日记</a></li>
+               	<li class="catalogue-li"><a href="../myTimetable.html">我的课表</a></li>
+          	</ul>
+            
+       	</div>
+            
+           
+        <div id="main-show">
+        	<div class="title">
+        	    <p><br />
+       	    <a href="blog2.html" style="cursor:pointer;">扫码登录原理及实现</a></p>
+                <hr style="width:100%;" />
+        	</div>
+            <p class="content">由于扫码登录比账号密码登录更方便、快捷、灵活，在实际使用中更受到用户的欢迎。</p>
+            <p class="content">本文主要介绍了扫码登录的原理及整体流程，包含了二维码的生成/获取、过期失效的处理、登录状态的监听。</p>
+            <p class="weight-bold">扫码登录的原理</p>
+            <p class="weight-bold">整体流程</p>
+            <p class="content">为方便理解，我简单画了一个 UML 时序图，用以描述扫码登录的大致流程！</p>
+            <img src="../images/博客图片/2-1.png"  />
+            
+            <p class="content">总结下核心流程：</p>
+    		<p class="content">
+    1) 请求业务服务器获取用以登录的二维码和UUID。</p>
+    		<p class="content">
+    2) 通过 websocket 连接 socket 服务器，并定时(时间间隔依据服务器配置时间调整)发送心跳保持连接。</p>
+    		<p class="content">
+    3) 用户通过 APP 扫描二维码，发送请求到业务服务器处理登录。根据 UUID 设置登录结果。</p>
+    		<p class="content">
+    4) socket 服务器通过监听获取登录结果，建立 session 数据，根据 UUID 推送登录数据到用户浏览器。</p>
+    		<p class="content">
+    5) 用户登录成功，服务器主动将该 socker 连接从连接池中剔除，该二维码失效。</p>
+            
+            <p class="weight-bold">关于客户端标识</p>
+            
+            <p class="content">也就是 UUID，这是贯穿整个流程的纽带，一个闭环登录过程，每一步业务处理都是围绕该次的 UUD 进行处理的。UUID 的生成有根据 session_id 的也有根据客户端 ip 地址的。个人还是建议每个二维码都有单独的 UUID，适用场景更广一些！</p>
+            
+            <p class="weight-bold">关于前端和服务器通讯</p>
+            
+            <p class="content">前端肯定是要和服务器保持一直通讯的，用以获取登录结果和二维码状态。看了下网上的一些实现方案，基本各个方案都有用的：轮询、长轮询、长链接、websocket。也不能肯定的说哪个方案好哪个方案不好，只能说哪个方案更适用于当前应用场景。个人比较建议使用长轮询、websocket 这种比较节省服务器性能的方案。</p>
+            
+             <p class="weight-bold">关于安全性识</p>
+            
+            <p class="content">扫码登录的好处显而易见，一是人性化，再就是防止密码泄漏。但是新方式的接入，往往也伴随着新的风险。所以，很有必要再整体过程中加入适当的安全机制。例如：</p>
+            
+            <p class="weight-bold">强制 HTTPS 协议</p>
+            <p class="weight-bold">短期令牌</p>
+            <p class="weight-bold">数据签名</p>
+            <p class="weight-bold">数据加密</p>
+            
+            <p class="weight-bold">扫码登录的过程演示</p>
+            
+            
+    
+    
+            <p class="content">代码实现和源码后面会给出。</p>
+            
+            <p class="weight-bold">开启 Socket 服务器</p>
+            <img src="../images/博客图片/2-2.png" />
+            
+            <p class="weight-bold">访问登录页面</p>
+            
+            <img src="../images/博客图片/2-3.png" />
+            
+            <p class="content">可以看到用户请求的二维码资源，并获取到了 qid 。</p>
+            
+            <p class="content">获取二维码时候会建立相应缓存，并设置过期时间：</p>
+            
+            <img src="../images/博客图片/2-4.png" />
+            
+            <p class="content">之后会连接 socket 服务器，定时发送心跳。</p>
+            
+            <img src="../images/博客图片/2-5.png" />
+            
+            <p class="content">此时 socket 服务器会有相应连接日志输出：</p>
+            
+            <img src="../images/博客图片/2-6.png" />
+            
+            <p class="content">完整 Demo 源码：BNDong/demo/scanCodeLogin</p>
+            <p class="content">&nbsp;</p>
+            <p class="content">&nbsp;</p>
+       	</div>         
+	</div>
+    <div style="width:100%;">
+    	<div style="float:left;">
+        </div>
+        
+     	<div style="float:right"><img src="../images/backToTop.png" width="50%" onclick="scrollTo('#gotomain',800);" style="cursor:pointer;"/>
+        </div>   
+   	</div>        
+    <div id="footer">
+      	<img src="../images/foot.png"  width="100%" height="100%"/>
+        <p id="yewei" style="text-align:center; font-family:'华文新魏';">[ 埋骨何须桑梓地，人生无处不青山 ]</p>    
+            <p style="text-align:center; font-family:'华文新魏';">Made by AnranWu</p>  
+    </div>
+    <SCRIPT language=javascript>
+	<!--
+	var timer1;
+	
+	var txt=new Array(17);
+		txt[0]="[ 明日之我，胸中有丘壑，立马振山河。 ]";
+		txt[1]="[ 能够让你后悔的，从来不是你做过的事，而是你想做却没有去做的事。 ]";
+		txt[2]="[ 小时候觉得开心就好，现在也是。 ]";
+		txt[3]="[ 欲买桂花同载酒，终不似，少年游 ]";
+		txt[4]="[ 聚是一团火，散是满天星 ]";
+		txt[5]="[ 你来人间一趟，你要看看太阳 ]";
+		txt[6]="[ 人之所以孤独，是因为要和某个人相遇。 ]";
+		txt[7]="[ 把酒祝东风，且共从容。 ——欧阳修 ]";
+		txt[8]="[ 每个人都会死去，但并不是每个人都真正活过。 ]";
+		txt[9]="[ 人生碌碌，竞短论长，却不道荣枯有数，得失难量 ]";
+		txt[10]="[ 总之岁月漫长，然而值得等待 ]";
+		txt[11]="[ 关山难越，谁悲失路之人？萍水相逢，尽是他乡之客。 ]";
+		txt[12]="[ 所有快乐，无需假装，此生尽兴，赤诚善良 ]";
+		txt[13]="[ 为你，千千万万遍。 ]";
+		txt[14]="[ 埋骨何须桑梓地，人生无处不青山 ]";
+		txt[15]="[ 于浩歌狂热之际寒，于天上看见深渊，于一切眼中看见无所有，于无处希望中得救。 ]";
+		txt[16]="[ 人生最好的三个词：久别重逢 失而复得 虚惊一场 ]";
+	timer1 = setInterval("myval()",4000);
+	function myval()
+	{
+		var rnd=Math.floor(Math.random()*17);
+		window.document.getElementById("yewei").innerHTML=txt[rnd];
+	}
+	-->
+</SCRIPT>
+</body>
+</html>
