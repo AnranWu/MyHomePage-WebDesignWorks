@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>( •̀ ω •́ )AnranWu的主页</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="icon" href="images/logo.png" sizes="35*35">
+
+</head>
+
+<body onload="demo.init();">
+	<!-- /加载动画 -->
+	<script>
+	const SETTINGS = 
+	{
+		rebound: 
+		{
+			tension: 16,
+			friction: 5
+		},
+		spinner: 
+		{
+			id: 'spinner',
+			radius: 90,
+			sides: 3,
+			depth: 4,
+			colors:
+			{
+				//background: '#231E76',
+				//stroke: '#231E76',
+				background: '#f0f0f0',
+				stroke: '#272633',
+				base: null,
+				child: '#272633'
+			},
+			alwaysForward: true, // When false the spring will reverse normally.
+			restAt: 0.5, // A number from 0.1 to 0.9 || null for full rotation
+			renderBase: false
+		}
+	};
+	</script>
+	<script src="js/main.js"></script>
+    <!-- /加载动画 -->
+    
+    <!-- /失去焦点Title变化 -->
+    <script>
+     	document.addEventListener('visibilitychange', function() 
+		{
+			var isHidden = document.hidden;
+			if (isHidden) 
+			{
+				document.title = '(oﾟvﾟ)ノ Hi( •̀ ω •́ )AnranWu的主页';
+			} 
+			else 
+			{
+				document.title = '( •̀ ω •́ )AnranWu的主页';
+			}
+     	});
+	</script>
+    <!-- /失去焦点Title变化 -->
+    
+    <!--自动转到主页-->
+    <script language="javascript" type="text/javascript">
+window.setTimeout("window.location='homePage.html'",2000);
+	</script>
+   	<!--自动转到主页-->
+    
+</body>
+</html>

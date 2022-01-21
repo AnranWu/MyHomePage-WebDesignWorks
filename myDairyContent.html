@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>( •̀ ω •́ )AnranWu的日记</title>
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+<link rel="icon" href="images/logo.png" sizes="35*35">
+
+<style>
+            .target {
+				width:500px;
+				height:300px;
+				overflow:hidden;
+				position:relative;
+				margin:0 auto;
+			}
+			.target img {
+				margin:0 auto;
+			}
+        #格言 {
+	font-family: "楷体";
+	font-size: 18px;
+}
+</style>
+<script src="js/jquery.js"></script>
+<script>
+function scrollTo(ele, speed){
+	if(!speed) speed = 800;
+	if(!ele){
+		$("html,body").animate({scrollTop:0},speed);
+	}else{
+		$("html,body").animate({scrollTop:$(ele).offset().top},speed);
+	}
+	return false;
+}
+</script>
+</head>
+
+<body style="margin:0%; text-align:center;">
+<!-- /线条随鼠标移动--> 
+<script>
+	!function(){
+	
+	function n(n,e,t){
+	
+	return n.getAttribute(e)||t
+	
+	}
+	
+	function e(n){
+	
+	return document.getElementsByTagName(n)
+	
+	}
+	
+	function t(){
+	
+	var t=e("script"),o=t.length,i=t[o-1];
+	
+	return{
+	
+	l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)
+	
+	}
+	
+	}
+	
+	function o(){
+	
+	a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
+	
+	c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
+	
+	}
+	
+	function i(){
+	
+	r.clearRect(0,0,a,c);
+	
+	var n,e,t,o,m,l;
+	
+	s.forEach(function(i,x){
+	
+	for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
+	
+	null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
+	
+	l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
+	
+	t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
+	
+	}),
+	
+	x(i)
+	
+	}
+	
+	var a,c,u,m=document.createElement("canvas"),
+	
+	d=t(),l="c_n"+d.l,r=m.getContext("2d"),
+	
+	x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
+	
+	function(n){
+	
+	window.setTimeout(n,1e3/45)
+	
+	},
+	
+	w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.onresize=o,
+	
+	window.onmousemove=function(n){
+	
+	n=n||window.event,y.x=n.clientX,y.y=n.clientY
+	
+	},
+	
+	window.onmouseout=function(){
+	
+	y.x=null,y.y=null
+	
+	};
+	
+	for(var s=[],f=0;d.n>f;f++){
+	
+	var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
+	
+	}
+	
+	u=s.concat([y]),
+	
+	setTimeout(function(){i()},100)
+	
+	}();
+</script>
+<!-- /线条随鼠标移动--> 
+
+<!-- /失去焦点Title变化 --> 
+<script>
+     	document.addEventListener('visibilitychange', function() 
+		{
+			var isHidden = document.hidden;
+			if (isHidden) 
+			{
+				document.title = '(oﾟvﾟ)ノ Hi( •̀ ω •́ )AnranWu的主页';
+			} 
+			else 
+			{
+				document.title = '( •̀ ω •́ )AnranWu的主页';
+			}
+     	});
+	</script> 
+<!-- /失去焦点Title变化 -->
+
+<!-- /看板娘-->
+<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+<script>
+    L2Dwidget.init({
+        "model": {
+            //jsonpath控制显示那个小萝莉模型，下面这个就是我觉得最可爱的小萝莉模型，替换时后面名字也要替换掉
+            jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+            "scale": 1
+        },
+        "display": {
+            "position": "left", //看板娘的表现位置
+            "width": 80,  //小萝莉的宽度
+            "height": 160, //小萝莉的高度
+            "hOffset": 0,
+            "vOffset": -20
+        },
+        "mobile": {
+            "show": true,
+            "scale": 0.5
+        },
+        "react": {
+            "opacityDefault": 0.7,
+            "opacityOnHover": 0.2
+        }
+    });
+</script>
+<!-- /看板娘-->
+<a id="gotomain"></a>
+	<div class="other-header" style="background-image:url(images/页首图片/山峰.jpg);">
+        <p style="color:#365B6B;">我的日记</p>
+    </div>
+    
+    <div id="main">
+        <div id="catalogue">
+         	<ul>
+            	<li class="catalogue-li"><a href="index.html">我的主页</a></li>
+              	<li class="catalogue-li"><a href="myBlogs.html">我的博客</a></li>
+               	<li class="catalogue-li"><a href="myAlbum.html">我的相册</a></li>
+              	<li class="catalogue-li" style="background-color:rgba(237,228,254,0.7); font-family:'方正粗黑宋简体';"><a href="myDairy.html">我的日记</a></li>
+               	<li class="catalogue-li"><a href="myTimetable.html">我的课表</a></li>
+          	</ul>
+            
+       	</div>
+
+        <div id="main-show">
+            <p>&nbsp;</p>
+            <p class="content">2020年6月8日 星期一 阴</p>
+            <p class="content">日记这个板块，是我Web大作业做的最后一个板块，这个板块结束，就代表着我整个Web大作业要进入尾声了。虽然还有一些测试、收尾工作，但是的确是，不忍离别，仍要离别。</p>
+            <p class="content">学了一个学期的Web开发，我从上个学期开始就对做网页特别感兴趣了，因为我觉得这是一件很神奇的事情，那些平时我会使用而不知由来的网站，有一天竟也能从我手里被创造出来。我一开始的想法是特别美好的，用自己的双手，创造最符合我心意的页面，想怎么设计就怎么设计。可是当我开始学习Web之后，我发现真不是那么回事儿，我常常为了两个div倔强地不肯呆在一起而苦恼半天，也常常为了一个页面为什么出不来滚动条抓耳挠腮。</p>
+            <p class="content">这一次的大作业，其实我是非常期待，抱着特别大的期许的，我很早就开始物色各种各样好看的特效，要把它们都放在我的第一个网站上；我收集了好多好多特效。其中一部分好看的灵感就来自于博客园，我一直觉得博客园是个非常nice的平台，DIY创造自己的博客，别提是件多么美妙的事情了，可是从博客园上扒代码就不是那么愉快的一件事了，一开始我以为我把一层一层理清楚就能看懂了，后来我发现我错了，从开发者工具上扒下来的代码好像是不完整的，因为毕竟它是一个真实运营的网站，如果有东西被隐匿在了后台，那我真的是欲哭无泪。在这个过程中，我为了一个加载动画，死磕了好多好多天，最后终于使皇天不负有心人让我找到了它，并且根据代码摸索出了它的用法，我真的特别高兴，同时我也正式认识到了GitHub这个平台，没错，我苦苦百度而不得的这个加载动画就是GitHub上的一个开源项目，我突然意识到GitHub是个好地方，也意识到百度其实并不是那么万能，甚至在某些时刻搜索能力并不能帮助到我。</p>
+            <p class="content">虽然扒代码让我白费了很多功夫，但是我觉得这非常值得，一点都不亏，因为在我们软件项目实训的时候需要改一个模板网页，我的队友告诉我她不会改，我感到非常惊讶，那一刻我意识到<span style="font-weight:bold; font-family:'华文新魏';">世界上真的没有白走的路，每一步都是值得。</span>我虽然花了很多时间扒代码、找轮子，却成效甚微，但是在这过程中学习到的一些技巧和知识，都是这路上的收获。</p>
+            <p class="content">说实话，就算已经做到了最后一个模块，我仍然觉得不够，因为我见过太多美好，都想要一一实现，怎奈期末时间有限，只能戛然而止。我还想要实现的功能有①一个按钮可以切换网页的白天和夜晚模式。②一个垂下来的小猫挂件，点一下会有拉拽了一下小猫的效果，然后滑动回到顶部。③实现一个可以打开可以合上的目录，目录里面有一个头像，头像点击一下就会转动。打开目录的按钮会随网页滑动而滑动位置，即它的位置是相对固定在页面上的。还有很多很多，就不一一列举啦，希望以后有空的时候可以一一实现他们。</p>
+            <p class="content">到了要说再见的时候啦，再见啦让我又爱又恨的Web开发，再见啦，超级温柔又可爱的徐老师，再见啦，这个特殊的学期和我的大二学年，再见啦，我的青春韶华。</p>
+            <p class="content">&nbsp;</p>
+            <p class="content">&nbsp;</p>
+        </div>  
+               
+</div>
+    <div style="width:100%;">
+    	<div style="float:left;">
+        </div>
+        
+     	<div style="float:right"><img src="images/backToTop.png" width="50%" onclick="scrollTo('#gotomain',800);" style="cursor:pointer;"/>
+        </div>   
+   	</div>     
+    <div id="footer">
+      	<img src="images/foot.png"  width="100%" height="100%"/>
+        <p id="yewei" style="text-align:center; font-family:'华文新魏';">[ 埋骨何须桑梓地，人生无处不青山 ]</p>    
+            <p style="text-align:center; font-family:'华文新魏';">Made by AnranWu</p>  
+    </div>
+	<SCRIPT language=javascript>
+	<!--
+	var timer1;
+	
+	var txt=new Array(17);
+		txt[0]="[ 明日之我，胸中有丘壑，立马振山河。 ]";
+		txt[1]="[ 能够让你后悔的，从来不是你做过的事，而是你想做却没有去做的事。 ]";
+		txt[2]="[ 小时候觉得开心就好，现在也是。 ]";
+		txt[3]="[ 欲买桂花同载酒，终不似，少年游 ]";
+		txt[4]="[ 聚是一团火，散是满天星 ]";
+		txt[5]="[ 你来人间一趟，你要看看太阳 ]";
+		txt[6]="[ 人之所以孤独，是因为要和某个人相遇。 ]";
+		txt[7]="[ 把酒祝东风，且共从容。 ——欧阳修 ]";
+		txt[8]="[ 每个人都会死去，但并不是每个人都真正活过。 ]";
+		txt[9]="[ 人生碌碌，竞短论长，却不道荣枯有数，得失难量 ]";
+		txt[10]="[ 总之岁月漫长，然而值得等待 ]";
+		txt[11]="[ 关山难越，谁悲失路之人？萍水相逢，尽是他乡之客。 ]";
+		txt[12]="[ 所有快乐，无需假装，此生尽兴，赤诚善良 ]";
+		txt[13]="[ 为你，千千万万遍。 ]";
+		txt[14]="[ 埋骨何须桑梓地，人生无处不青山 ]";
+		txt[15]="[ 于浩歌狂热之际寒，于天上看见深渊，于一切眼中看见无所有，于无处希望中得救。 ]";
+		txt[16]="[ 人生最好的三个词：久别重逢 失而复得 虚惊一场 ]";
+	timer1 = setInterval("myval()",4000);
+	function myval()
+	{
+		var rnd=Math.floor(Math.random()*17);
+		window.document.getElementById("yewei").innerHTML=txt[rnd];
+	}
+	-->
+</SCRIPT>
+</body>
+</html>
